@@ -3,7 +3,7 @@ class eyaml::keys {
 require ::eyaml
 
 #directory for keys
-file { ' [ '/etc/puppetlabs/puppet/secure', '/etc/puppetlabs/puppet/secure/keys' ]:
+file { [ '/etc/puppetlabs/puppet/secure', '/etc/puppetlabs/puppet/secure/keys' ]:
   ensure => 'directory',
   owner  => 'pe-puppet',
   group  => 'pe-puppet',

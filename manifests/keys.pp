@@ -3,7 +3,7 @@ class eyaml::keys {
 require ::eyaml
 
 #directory for keys
-file { '/etc/puppetlabs/puppet/keys':
+file { ' [ '/etc/puppetlabs/puppet/secure', '/etc/puppetlabs/puppet/secure/keys' ]:
   ensure => 'directory',
   owner  => 'pe-puppet',
   group  => 'pe-puppet',
@@ -15,12 +15,12 @@ file { '/etc/puppetlabs/puppet/keys':
 exec { 'eyaml_createkeys':
   command => 'eyaml createkeys',
   path    => '/opt/puppetlabs/puppet/bin/',
-  cwd     => '/etc/puppetlabs/puppet',
-  creates => '/etc/puppetlabs/puppet/keys/private_key.pkcs7.pem',
+  cwd     => '/etc/puppetlabs/puppet/secure/',
+  creates => '/etc/puppetlabs/puppet/secure/keys/private_key.pkcs7.pem',
   }
 
 #set file permissions
-file { ['/etc/puppetlabs/puppet/keys/private_key.pkcs7.pem','/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem'] :
+file { ['/etc/puppetlabs/puppet/secure/keys/private_key.pkcs7.pem','/etc/puppetlabs/puppet/secure/keys/public_key.pkcs7.pem'] :
   ensure    => 'present',
   owner     => 'pe-puppet',
   group     => 'pe-puppet',

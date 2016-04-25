@@ -22,17 +22,20 @@ This module manages installation and setup of hiera-eyaml backend for PE puppets
 It installs hiera-eyaml backend for puppet server and also installs hiera-eyaml gem for CLI.
 It creates and manages public and private keys for hiera-eyaml.
 
+It creates the directory /etc/puppetlabs/puppet/secure/keys, manages appropriate file permissions and generates the keys in this directory.
+
 ## Setup
 
 ### What eyaml affects
 
 hiera-eyaml package for puppetserver
 hiera-eyaml gem for CLI
-keys for hiera-eyaml
+Directory structure /etc/puppetlabs/puppet/secure/keys
+Public and private keys for hiera-eyaml in /etc/puppetlabs/puppet/secure/keys
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements 
 
-Edit your hiera.yaml appropriately after installing hiera-eyaml from this module.
+After installing hiera-eyaml from this module edit your hiera.yaml appropriately .
 
 ### Beginning with eyaml
 
@@ -43,15 +46,4 @@ Edit hiera.yaml to add eyaml backend
 
 include eyaml
 include eyaml::keys
-
-## Reference
-
-
-## Limitations
-
-
-## Development
-
-
-## Release Notes/Contributors/Etc **Optional**
 

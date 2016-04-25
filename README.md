@@ -9,9 +9,6 @@
     * [Setup requirements](#setup-requirements)
     * [Beginning with eyaml](#beginning-with-eyaml)
 4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
 
 ## Overview
 
@@ -28,10 +25,10 @@ It creates the directory /etc/puppetlabs/puppet/secure/keys, manages appropriate
 
 ### What eyaml affects
 
-hiera-eyaml package for puppetserver
-hiera-eyaml gem for CLI
-Directory structure /etc/puppetlabs/puppet/secure/keys
-Public and private keys for hiera-eyaml in /etc/puppetlabs/puppet/secure/keys
+1. hiera-eyaml package for puppetserver
+2. hiera-eyaml gem for CLI
+3. Directory structure /etc/puppetlabs/puppet/secure/keys
+4. Public and private keys for hiera-eyaml in /etc/puppetlabs/puppet/secure/keys
 
 ### Setup Requirements 
 
@@ -39,11 +36,11 @@ After installing hiera-eyaml from this module edit your hiera.yaml appropriately
 
 ### Beginning with eyaml
 
-Declare the classes eyaml and eyaml::keys
-Edit hiera.yaml to add eyaml backend
+1. Declare the classes eyaml and eyaml::keys
+2. Edit hiera.yaml to add eyaml backend
 
 ## Usage
 
-include eyaml
-include eyaml::keys
+* include eyaml
+* include eyaml::keys
 

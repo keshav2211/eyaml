@@ -1,15 +1,32 @@
+# == Class: eyaml::keys
+#
+# Generate and manage keys for hiera eyaml backend and cli
+#
+# === Parameters
+#
+#
+# === Authors
+#
+# Keshav Sharma <keshav2211@gmail.com>
+#
+# === Copyright
+#
+# Copyright 2016 Keshav Sharma <keshav2211@gmail.com>, unless otherwise noted.
+#
+
 class eyaml::keys {
 
 require ::eyaml
 
 #directory for keys
-file { [ '/etc/puppetlabs/puppet/secure', '/etc/puppetlabs/puppet/secure/keys' ]:
+file { ['/etc/puppetlabs/puppet/secure',
+        '/etc/puppetlabs/puppet/secure/keys' ]:
   ensure => 'directory',
   owner  => 'pe-puppet',
   group  => 'pe-puppet',
   mode   => '0500',
   before => Exec['eyaml_createkeys'],
- }
+  }
 
 #eyaml binary createkeys
 exec { 'eyaml_createkeys':
@@ -20,7 +37,8 @@ exec { 'eyaml_createkeys':
   }
 
 #set file permissions
-file { ['/etc/puppetlabs/puppet/secure/keys/private_key.pkcs7.pem','/etc/puppetlabs/puppet/secure/keys/public_key.pkcs7.pem'] :
+file { ['/etc/puppetlabs/puppet/secure/keys/private_key.pkcs7.pem',
+        '/etc/puppetlabs/puppet/secure/keys/public_key.pkcs7.pem']:
   ensure    => 'present',
   owner     => 'pe-puppet',
   group     => 'pe-puppet',

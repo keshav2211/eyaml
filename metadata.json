@@ -1,0 +1,14 @@
+{
+  "name": "keshav2211-eyaml",
+  "version": "0.1.0",
+  "author": "Keshav Sharma",
+  "summary": "Installation and setup of hiera eyaml backend and CLI",
+  "license": "Apache-2.0",
+  "source": "https://github.com/keshav2211/eyaml.git",
+  "project_page": "https://github.com/keshav2211/eyaml",
+  "issues_url": "https://github.com/keshav2211/eyaml/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+

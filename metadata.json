@@ -1,6 +1,6 @@
 {
   "name": "keshav2211-eyaml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Keshav Sharma",
   "summary": "Installation and setup of hiera eyaml backend and CLI",
   "license": "Apache-2.0",
@@ -8,7 +8,13 @@
   "project_page": "https://github.com/keshav2211/eyaml",
   "issues_url": "https://github.com/keshav2211/eyaml/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
-  ]
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-puppetserver_gem","version_requirement":">=0.2.0"}
+  ],
+  "operatingsystem_support": [
+    {"operatingsystem":"RedHat","operatingsystemrelease":[ "5.0", "6.0" ]},
+    {"operatingsystem": "Ubuntu","operatingsystemrelease": ["12.04","10.04"]}
+  ],
+  "tags": ["eyaml", "hiera-eyaml", "eyaml-keys", "encrypted-yaml"],
 }
 
